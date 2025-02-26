@@ -9,7 +9,6 @@
     --text-primary: 0 0 0; /* #000000 */
     --text-secondary: 54 69 79; /* #36454F */
     --primary-main: 255 0 79; /* #FF004F */
-    --primary-blue: 48 92 222; /* #305CDE */
   }
 
   .dark {
@@ -17,6 +16,18 @@
     --background-secondary: 20 20 20; /* #141414 */
     --text-primary: 255 255 255; /* #FFFFFF */
     --text-secondary: 238 238 238; /* #EEEEEE */
+  }
+
+  /* Remove global transitions for theme changes */
+  html {
+    color-scheme: light dark;
+  }
+
+  /* Define a utility class for layout transitions only */
+  .transition-layout {
+    transition-property: width, transform, left, right, top, bottom, margin, padding;
+    transition-duration: 500ms;
+    transition-timing-function: ease-in-out;
   }
 }
 
