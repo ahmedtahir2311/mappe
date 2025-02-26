@@ -41,34 +41,13 @@ export function Sidebar({ className = '' }: SidebarProps) {
         {/* Middle section - Menu Items */}
         <nav className={`flex-grow mt-16 ${isOpen ? 'px-5' : 'px-3'}`}>
           <ul className="space-y-3">
-            <li>
-              <MenuItem icon={<Home size={22} />} text="Home" href="/" isOpen={isOpen} />
-            </li>
-            <li>
-              <MenuItem icon={<Info size={22} />} text="About" href="/about" isOpen={isOpen} />
-            </li>
-            <li>
-              <MenuItem
-                icon={<Briefcase size={22} />}
-                text="Services"
-                href="/services"
-                isOpen={isOpen}
-              />
-            </li>
-            <li>
-              <MenuItem icon={<FileText size={22} />} text="Blog" href="/blog" isOpen={isOpen} />
-            </li>
-            <li>
-              <MenuItem
-                icon={<FolderKanban size={22} />}
-                text="Projects"
-                href="/projects"
-                isOpen={isOpen}
-              />
-            </li>
-            <li>
-              <MenuItem icon={<Mail size={22} />} text="Contact" href="/contact" isOpen={isOpen} />
-            </li>
+            {menuItems.map((x) => {
+              return (
+                <li key={x.name}>
+                  <MenuItem icon={x.icon} text={x.name} href={x.href} isOpen={isOpen} />
+                </li>
+              );
+            })}
           </ul>
         </nav>
 
@@ -84,18 +63,9 @@ export function Sidebar({ className = '' }: SidebarProps) {
               isOpen ? 'justify-start gap-2' : 'flex-col items-center gap-4'
             }`}
           >
-            <SocialItem icon={<Github size={18} />} href="https://github.com" label="GitHub" />
-            <SocialItem
-              icon={<Linkedin size={18} />}
-              href="https://linkedin.com"
-              label="LinkedIn"
-            />
-            <SocialItem icon={<Twitter size={18} />} href="https://twitter.com" label="Twitter" />
-            <SocialItem
-              icon={<Instagram size={18} />}
-              href="https://instagram.com"
-              label="Instagram"
-            />
+            {socialItems.map((x) => {
+              return <SocialItem href={x.href} icon={x.icon} label={x.label} key={x.label} />;
+            })}
           </div>
         </div>
       </div>
@@ -105,3 +75,55 @@ export function Sidebar({ className = '' }: SidebarProps) {
     </div>
   );
 }
+
+const menuItems = [
+  {
+    name: 'Home',
+    icon: <Home size={22} />,
+    href: '/',
+  },
+  {
+    name: 'About',
+    icon: <Info size={22} />,
+    href: '/',
+  },
+  {
+    name: 'Services',
+    icon: <Briefcase size={22} />,
+    href: '/',
+  },
+  {
+    name: 'Blog',
+    icon: <FileText size={22} />,
+    href: '/',
+  },
+  {
+    name: 'Projects',
+    icon: <FolderKanban size={22} />,
+    href: '/',
+  },
+  {
+    name: 'Contact',
+    icon: <Mail size={22} />,
+    href: '/',
+  },
+];
+
+const socialItems = [
+  {
+    label: 'GitHub',
+    icon: <Github size={18} />,
+    href: 'https://github.com',
+  },
+  {
+    label: 'LinkedIn',
+    icon: <Linkedin size={18} />,
+    href: 'https://linkedin.com',
+  },
+  {
+    icon: <Instagram size={18} />,
+    href: 'https://instagram.com',
+    label: 'Instagram',
+  },
+  { icon: <Twitter size={18} />, href: 'https://twitter.com', label: 'Twitter' },
+];
