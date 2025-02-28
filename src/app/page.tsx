@@ -1,12 +1,8 @@
 import Image from 'next/image';
-import { ThemeToggle } from '@/components/ui/ThemeToggle';
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <div className="absolute top-4 right-4">
-        <ThemeToggle />
-      </div>
+    <div className="flex flex-col items-center justify-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] bg-red-100">
       <main className="flex flex-col gap-8 items-center sm:items-start">
         <Image
           className="dark:invert"
@@ -30,8 +26,7 @@ export default function Home() {
             </code>
           </li>
           <li className="mb-2">
-            Click the theme toggle button in the top right corner to switch between light and dark
-            mode
+            The theme toggle button is now located in the sidebar for easy access
           </li>
           <li>Use the sidebar toggle button to open and close the sidebar</li>
         </ol>

@@ -12,7 +12,7 @@ export function SidebarToggle({ isOpen, onClick, className = '' }: SidebarToggle
   return (
     <button
       onClick={onClick}
-      className={`absolute -right-5 transform bg-[rgb(var(--primary-main))] text-white rounded-full p-1 shadow-md hover:opacity-80 ${className}`}
+      className={`absolute -right-4 transform bg-[rgb(var(--primary-main))] text-white rounded-full p-1 shadow-md hover:opacity-80 ${className}`}
       aria-label={isOpen ? 'Close sidebar' : 'Open sidebar'}
     >
       {isOpen ? <ChevronLeft size={20} /> : <ChevronRight size={20} />}
