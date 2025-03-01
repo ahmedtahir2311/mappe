@@ -20,7 +20,11 @@ export function ClientLayout({ children }: ClientLayoutProps) {
       <TopNavbar />
 
       {/* Main content area that adjusts width based on sidebar state */}
-      <main className={`flex-grow transition-layout ${isOpen ? 'ml-72' : 'ml-20'} overflow-y-auto`}>
+      <main
+        className={`flex-grow transition-layout ${
+          isOpen ? 'ml-72' : 'ml-20'
+        } overflow-y-auto scroll-smooth`}
+      >
         {children}
       </main>
     </div>

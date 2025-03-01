@@ -4,7 +4,6 @@ import {
   Home,
   Info,
   Briefcase,
-  FileText,
   FolderKanban,
   Mail,
   Github,
@@ -80,32 +79,27 @@ const menuItems = [
   {
     name: 'Home',
     icon: <Home size={22} />,
-    href: '/',
+    href: '#',
   },
   {
     name: 'About',
     icon: <Info size={22} />,
-    href: '/',
+    href: '#about',
   },
   {
     name: 'Services',
     icon: <Briefcase size={22} />,
-    href: '/',
-  },
-  {
-    name: 'Blog',
-    icon: <FileText size={22} />,
-    href: '/',
+    href: '#services',
   },
   {
     name: 'Projects',
     icon: <FolderKanban size={22} />,
-    href: '/',
+    href: '#projects',
   },
   {
     name: 'Contact',
     icon: <Mail size={22} />,
-    href: '/',
+    href: '#contact',
   },
 ];
 

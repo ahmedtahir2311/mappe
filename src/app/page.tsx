@@ -1,5 +1,7 @@
 import Image from 'next/image';
 import { SectionTitle } from '@/components/ui/section-title';
+import { ScrollDownIndicator } from '@/components/ui/scroll-down-indicator';
+import { SmoothScrollLink } from '@/components/ui/smooth-scroll-link';
 
 export default function Home() {
   return (
@@ -36,42 +38,23 @@ export default function Home() {
             solutions for the digital world.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <a
+            <SmoothScrollLink
               href="#about"
               className="px-8 py-3 bg-white text-[rgb(var(--primary-main))] rounded-full font-medium hover:bg-opacity-90 transition-all"
             >
               Learn More
-            </a>
-            <a
+            </SmoothScrollLink>
+            <SmoothScrollLink
               href="#contact"
               className="px-8 py-3 border-2 border-white rounded-full font-medium hover:bg-white hover:bg-opacity-10 transition-all"
             >
               Contact Me
-            </a>
+            </SmoothScrollLink>
           </div>
         </div>
 
         {/* Scroll Down Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
-          <a href="#about" className="text-white flex flex-col items-center">
-            <span className="mb-2">Scroll Down</span>
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M12 5V19M12 19L5 12M12 19L19 12"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </a>
-        </div>
+        <ScrollDownIndicator targetId="about" />
       </section>
 
       {/* About Section */}
@@ -90,12 +73,12 @@ export default function Home() {
                 nisl sit amet nisl. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               </p>
               <div className="flex gap-4">
-                <a
+                <SmoothScrollLink
                   href="#projects"
                   className="px-6 py-2 bg-[rgb(var(--primary-main))] text-white rounded-full font-medium hover:bg-opacity-90 transition-all"
                 >
                   View Projects
-                </a>
+                </SmoothScrollLink>
                 <a
                   href="/resume.pdf"
                   className="px-6 py-2 border border-[rgb(var(--primary-main))] text-[rgb(var(--primary-main))] rounded-full font-medium hover:bg-[rgb(var(--primary-main))] hover:bg-opacity-10 transition-all"

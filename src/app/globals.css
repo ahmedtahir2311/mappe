@@ -23,6 +23,7 @@
   /* Remove global transitions for theme changes */
   html {
     color-scheme: light dark;
+    scroll-behavior: smooth;
   }
 
   /* Define a utility class for layout transitions only */
