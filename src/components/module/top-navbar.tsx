@@ -13,16 +13,20 @@ export function TopNavbar({ className = '' }: TopNavbarProps) {
 
   return (
     <div
-      className={`fixed top-0 right-0 z-20 flex items-center justify-end gap-4 p-4 ${className}`}
+      className={`fixed top-0 right-0 z-40 flex items-center justify-end gap-4 p-4 pointer-events-none ${className}`}
     >
-      <ThemeToggle />
-      <button
-        onClick={toggle}
-        className="rounded-md bg-[rgb(var(--background-secondary))] p-2 text-[rgb(var(--text-primary))] transition-colors hover:bg-[rgb(var(--primary-main))] hover:text-white"
-        aria-label="Toggle sidebar"
-      >
-        <Menu size={24} />
-      </button>
+      <div className="pointer-events-auto">
+        <ThemeToggle />
+      </div>
+      <div className="pointer-events-auto">
+        <button
+          onClick={toggle}
+          className="rounded-md bg-[rgb(var(--background-secondary))] p-2 text-[rgb(var(--text-primary))] transition-colors hover:bg-[rgb(var(--primary-main))] hover:text-white"
+          aria-label="Toggle sidebar"
+        >
+          <Menu size={24} />
+        </button>
+      </div>
     </div>
   );
 }

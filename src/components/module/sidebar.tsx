@@ -27,7 +27,7 @@ export function Sidebar({ className = '' }: SidebarProps) {
 
   return (
     <div
-      className={`fixed top-0 left-0 h-full bg-[rgb(var(--background-secondary))] shadow-md transition-layout z-10 ${
+      className={`fixed top-0 left-0 h-screen bg-[rgb(var(--background-secondary))] shadow-md transition-layout z-30 ${
         isOpen ? 'w-72' : 'w-20'
       } ${className}`}
     >

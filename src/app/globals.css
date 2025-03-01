@@ -9,6 +9,7 @@
     --text-primary: 0 0 0; /* #000000 */
     --text-secondary: 54 69 79; /* #36454F */
     --primary-main: 255 0 79; /* #FF004F */
+    --accent-main: 255 165 0; /* #FFA500 - Orange */
   }
 
   .dark {
@@ -16,6 +17,7 @@
     --background-secondary: 20 20 20; /* #141414 */
     --text-primary: 255 255 255; /* #FFFFFF */
     --text-secondary: 238 238 238; /* #EEEEEE */
+    --accent-main: 255 215 0; /* #FFD700 - Gold */
   }
 
   /* Remove global transitions for theme changes */
