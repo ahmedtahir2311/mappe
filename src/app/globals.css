@@ -10,6 +10,8 @@
     --text-secondary: 54 69 79; /* #36454F */
     --primary-main: 255 0 79; /* #FF004F */
     --accent-main: 255 165 0; /* #FFA500 - Orange */
+    --danger-main: 220 38 38; /* #DC2626 - Red 600 */
+    --success-main: 22 163 74; /* #16A34A - Green 600 */
   }
 
   .dark {
@@ -18,6 +20,8 @@
     --text-primary: 255 255 255; /* #FFFFFF */
     --text-secondary: 238 238 238; /* #EEEEEE */
     --accent-main: 255 215 0; /* #FFD700 - Gold */
+    --danger-main: 248 113 113; /* #F87171 - Red 400 */
+    --success-main: 74 222 128; /* #4ADE80 - Green 400 */
   }
 
   /* Remove global transitions for theme changes */

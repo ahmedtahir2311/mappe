@@ -15,7 +15,15 @@ export default {
       colors: {
         background: 'var(--background)',
         foreground: 'var(--foreground)',
-        primary: '#FF004F',
+        primary: {
+          main: 'rgb(var(--primary-main) / <alpha-value>)',
+        },
+        danger: {
+          main: 'rgb(var(--danger-main) / <alpha-value>)',
+        },
+        success: {
+          main: 'rgb(var(--success-main) / <alpha-value>)',
+        },
         light: {
           background: {
             primary: '#ffffff',
@@ -36,6 +44,9 @@ export default {
             secondary: '#EEEEEE',
           },
         },
+      },
+      borderRadius: {
+        DEFAULT: '0.375rem',
       },
     },
   },

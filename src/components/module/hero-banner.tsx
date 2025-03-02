@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { TypingEffect } from '@/components/ui/typing-effect';
-import Link from 'next/link';
+import { Button } from '@/components/ui/button';
 
 const HeroBanner = () => {
   const professions = [
@@ -53,12 +53,20 @@ const HeroBanner = () => {
                 technical precision with creative problem-solving to bring ideas to life.
               </p>
 
-              <Link
-                href="#about"
-                className="inline-block px-8 py-3 bg-[rgb(var(--primary))] text-white rounded-md font-medium transition-all hover:bg-opacity-90 hover:translate-y-[-2px] shadow-md"
+              <Button
+                variant="primary"
+                buttonStyle="contained"
+                size="md"
+                withRipple={true}
+                // onClick={() => {
+                //   const aboutSection = document.getElementById('about');
+                //   if (aboutSection) {
+                //     aboutSection.scrollIntoView({ behavior: 'smooth' });
+                //   }
+                // }}
               >
                 Learn More
-              </Link>
+              </Button>
             </div>
 
             {/* Right Section - Image (40% width on large screens) */}

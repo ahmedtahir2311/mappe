@@ -77,27 +77,27 @@ export function Sidebar({ className = '' }: SidebarProps) {
 
 const menuItems = [
   {
-    name: 'Home',
+    name: 'Origin Point',
     icon: <Home size={22} />,
     href: '#',
   },
   {
-    name: 'About',
+    name: 'The Journey',
     icon: <Info size={22} />,
     href: '#about',
   },
   {
-    name: 'Services',
+    name: 'Beyond the Basics',
     icon: <Briefcase size={22} />,
     href: '#services',
   },
   {
-    name: 'Projects',
+    name: 'Case Studies',
     icon: <FolderKanban size={22} />,
     href: '#projects',
   },
   {
-    name: 'Contact',
+    name: 'Get in Touch',
     icon: <Mail size={22} />,
     href: '#contact',
   },
