@@ -6,11 +6,11 @@ import Link from 'next/link';
 
 const HeroBanner = () => {
   const professions = [
-    'Web Designer',
-    'Web Developer',
+    'Full Stack Developer',
+    'AI Enthusiast',
+    'Blockchain Architect',
     'UI/UX Designer',
     'Freelancer',
-    'Content Writer',
   ];
 
   return (
@@ -36,7 +36,7 @@ const HeroBanner = () => {
             {/* Left Section - Text Content (60% width on large screens) */}
             <div className="w-full lg:w-3/5 mb-10 lg:mb-0 text-center lg:text-left">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-[rgb(var(--text-primary))]">
-                I&apos;m Jane Cooper a <br />
+                I&apos;m Ahmed Tahir a <br />
                 <span className="text-[rgb(var(--primary-main))]">
                   <TypingEffect
                     words={professions}
@@ -48,11 +48,9 @@ const HeroBanner = () => {
               </h1>
 
               <p className="text-[rgb(var(--text-secondary))] text-lg mb-8 max-w-2xl mx-auto lg:mx-0">
-                Welcome to my digital portfolio where creativity meets functionality. With over 5
-                years of experience in web development and design, I specialize in creating
-                beautiful, responsive, and user-friendly websites that not only look great but also
-                deliver exceptional user experiences. My approach combines technical expertise with
-                creative problem-solving to bring your vision to life.
+                With over 5 years of experience in development and design, I specialize in Web
+                Applications that blend aesthetics with functionality. My expertise lies in merging
+                technical precision with creative problem-solving to bring ideas to life.
               </p>
 
               <Link
