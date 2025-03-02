@@ -1,5 +1,3 @@
-'use client';
-
 import Image from 'next/image';
 import { TypingEffect } from '@/components/ui/typing-effect';
 import { Button } from '@/components/ui/button';
@@ -31,58 +29,88 @@ const HeroBanner = () => {
 
       {/* Hero Content */}
       <div className="relative z-20 w-full px-6 md:px-12 lg:px-24 bg-transparent">
-        <div className="container mx-auto">
-          <div className="flex flex-col lg:flex-row items-center">
-            {/* Left Section - Text Content (60% width on large screens) */}
-            <div className="w-full lg:w-3/5 mb-10 lg:mb-0 text-center lg:text-left">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-[rgb(var(--text-primary))]">
-                I&apos;m Ahmed Tahir a <br />
-                <span className="text-[rgb(var(--primary-main))]">
-                  <TypingEffect
-                    words={professions}
-                    typingSpeed={100}
-                    deletingSpeed={50}
-                    delayBetweenWords={1500}
-                  />
-                </span>
-              </h1>
-
-              <p className="text-[rgb(var(--text-secondary))] text-lg mb-8 max-w-2xl mx-auto lg:mx-0">
-                With over 5 years of experience in development and design, I specialize in Web
-                Applications that blend aesthetics with functionality. My expertise lies in merging
-                technical precision with creative problem-solving to bring ideas to life.
-              </p>
-
-              <Button
-                variant="primary"
-                buttonStyle="contained"
-                size="md"
-                withRipple={true}
-                // onClick={() => {
-                //   const aboutSection = document.getElementById('about');
-                //   if (aboutSection) {
-                //     aboutSection.scrollIntoView({ behavior: 'smooth' });
-                //   }
-                // }}
-              >
-                Learn More
-              </Button>
-            </div>
-
-            {/* Right Section - Image (40% width on large screens) */}
-            {/* Commented out as requested
-            <div className="w-full lg:w-2/5 relative">
-              <div className="relative w-full aspect-square max-w-md mx-auto">
-                <Image
-                  src="/assets/images/hero-image.png"
-                  alt="Jane Cooper - Web Developer"
-                  fill
-                  className="object-contain"
-                  priority
+        <div className="container mx-auto flex flex-col lg:flex-row items-center">
+          {/* Left Section - Text Content */}
+          <div className="w-full lg:w-1/2 text-center lg:text-left">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-[rgb(var(--text-primary))]">
+              I&apos;m Ahmed Tahir a <br />
+              <span className="text-[rgb(var(--primary-main))]">
+                <TypingEffect
+                  words={professions}
+                  typingSpeed={100}
+                  deletingSpeed={50}
+                  delayBetweenWords={1500}
                 />
-              </div>
+              </span>
+            </h1>
+
+            <p className="text-[rgb(var(--text-secondary))] text-lg mb-8 max-w-2xl mx-auto lg:mx-0">
+              With over 5 years of experience in development and design, I specialize in Web
+              Applications that blend aesthetics with functionality. My expertise lies in merging
+              technical precision with creative problem-solving to bring ideas to life.
+            </p>
+
+            <Button variant="primary" buttonStyle="contained" size="md" withRipple={true}>
+              Learn More
+            </Button>
+          </div>
+
+          {/* Right Section - Image with overlaid text */}
+          <div className="w-full lg:w-1/2 flex justify-center lg:justify-end relative h-[70vh] lg:h-[100vh]">
+            {/* Top "WEB DESIGNER" text overlay with wave animation */}
+            <div className="absolute top-[30%] z-10 w-full flex justify-center">
+              <h2 className="text-5xl md:text-6xl font-bold text-[rgb(var(--background-primary-main))] opacity-70">
+                WEB DESIGNER{' '}
+                {/* {isMounted && (
+                  <TextAnimation
+                    text="WEB DESIGNER"
+                    animationStyle="wave"
+                    charClassName="mx-[1px]"
+                    activeCharClassName="opacity-100"
+                    duration={600}
+                    staggerDelay={100}
+                    sequential={true}
+                    infinite={true}
+                    delay={1000}
+                  />
+                )} */}
+              </h2>
             </div>
-            */}
+
+            {/* Main image */}
+            <div className="absolute inset-0 flex items-end justify-center z-20">
+              <Image
+                src="/assets/images/banner-user-image-one.png"
+                alt="Web Designer Professional"
+                className="object-contain "
+                height={600}
+                width={500}
+                quality={100}
+                priority
+              />
+            </div>
+
+            {/* Bottom "WEB DESIGNER" text with bouncing effect */}
+            <div className="absolute bottom-[5%] z-30 w-full flex justify-center">
+              <h2
+                className="text-5xl md:text-6xl font-bold text-[rgb(var(--text-primary))] tracking-widest"
+                style={{ textShadow: '1px 1px 3px rgba(0,0,0,0.2)' }}
+              >
+                WEB DESIGNER
+                {/* {isMounted && (
+                  <TextAnimation
+                    text="WEB DESIGNER"
+                    animationStyle="bounce"
+                    charClassName="mx-[2px]"
+                    activeCharClassName="text-[rgb(var(--primary-main))]"
+                    duration={400}
+                    staggerDelay={80}
+                    sequential={true}
+                    infinite={true}
+                  />
+                )} */}
+              </h2>
+            </div>
           </div>
         </div>
       </div>

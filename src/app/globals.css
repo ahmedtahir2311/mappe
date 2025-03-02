@@ -41,3 +41,57 @@
 body {
   @apply bg-[rgb(var(--background-primary))] text-[rgb(var(--text-primary))] font-nunito;
 }
+
+/* Text Animation Styles */
+@keyframes bounce-text {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-0.5em);
+  }
+}
+
+@keyframes wave-text {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-0.3em) rotate(-6deg);
+  }
+  75% {
+    transform: translateY(0.1em) rotate(6deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+@keyframes shake-text {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+}
+
+.animate-text-bounce {
+  animation: bounce-text 0.5s ease-in-out;
+  transform: translateY(-0.5em);
+}
+
+.animate-text-wave {
+  animation: wave-text 0.5s ease-in-out;
+  transform: translateY(-0.3em) rotate(-6deg);
+}
+
+.animate-text-shake {
+  animation: shake-text 0.5s ease-in-out;
+  transform: translateX(-5px);
+}
