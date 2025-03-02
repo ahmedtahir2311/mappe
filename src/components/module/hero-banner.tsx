@@ -2,30 +2,36 @@ import Image from 'next/image';
 
 const HeroBanner = () => {
   return (
-    <section className="relative h-[100vh] w-full overflow-hidden -mt-0">
+    <section className="relative h-[100vh] w-full overflow-hidden -mt-0 bg-[rgb(var(--background-primary))]">
       {/* Background Image */}
-      {/* <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0">
         <Image
-          src="/images/hero-bg.jpg"
-          alt="Hero Background"
+          src="/assets/images/banner-background-one.png"
+          alt="Pattern Overlay"
+          className="w-full h-full object-cover invert dark:invert-0"
           fill
-          priority
-          className="object-cover"
+          quality={100}
+          placeholder="empty"
+          blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDABQODxIPDRQSEBIXFRQdHx4eHRoaHSQrJyEkKzI2LyssLTM1P0BGP0FHNi5GRVFXWlNQV2pgeGBQY3BzaXJYYVn/2wBDARUXFx4aHR4eHVlaL0IvQllaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWln/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
         />
-        <div className="absolute inset-0 bg-[rgb(var(--primary-main))] opacity-80"></div>
-      </div> */}
+      </div>
 
       {/* Pattern Overlays */}
-      <div className="absolute top-0 left-0 w-1/2 h-full z-10 opacity-10">
-        <Image src="/images/pattern-1.svg" alt="Pattern Overlay" fill className="object-cover" />
-      </div>
-      <div className="absolute top-0 right-0 w-1/2 h-full z-10 opacity-10">
+      {/* <div className="absolute top-0 left-0 w-full h-full z-10 opacity-10 ">
+        <Image
+          src="/assets/images/banner-background-one.jpg"
+          alt="Pattern Overlay"
+          fill
+          className="object-cover"
+        />
+      </div> */}
+      {/* <div className="absolute top-0 right-0 w-[40vw] h-full z-10 opacity-10">
         <Image src="/images/pattern-2.svg" alt="Pattern Overlay" fill className="object-cover" />
-      </div>
+      </div> */}
 
       {/* Hero Content */}
       <div className="relative z-20 flex flex-col items-center justify-center h-full text-white px-6 md:px-12 lg:px-24 pt-16">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-6">
+        {/* <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-6">
           Welcome to <span className="text-[rgb(var(--accent-main))]">My Portfolio</span>
         </h1>
         <p className="text-lg md:text-xl text-center max-w-3xl mb-8">
@@ -45,7 +51,7 @@ const HeroBanner = () => {
           >
             Contact Me
           </a>
-        </div>
+        </div> */}
       </div>
     </section>
   );
