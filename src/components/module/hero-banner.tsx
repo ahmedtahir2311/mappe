@@ -107,19 +107,6 @@ const HeroBanner = () => {
             <div className="absolute top-[30%] z-10 w-full flex justify-center">
               <h2 className="text-5xl md:text-6xl font-bold text-[rgb(var(--background-primary-main))] opacity-70">
                 WEB DESIGNER{' '}
-                {/* {isMounted && (
-                  <TextAnimation
-                    text="WEB DESIGNER"
-                    animationStyle="wave"
-                    charClassName="mx-[1px]"
-                    activeCharClassName="opacity-100"
-                    duration={600}
-                    staggerDelay={100}
-                    sequential={true}
-                    infinite={true}
-                    delay={1000}
-                  />
-                )} */}
               </h2>
             </div>
 
@@ -143,18 +130,6 @@ const HeroBanner = () => {
                 style={{ textShadow: '1px 1px 3px rgba(0,0,0,0.2)' }}
               >
                 WEB DESIGNER
-                {/* {isMounted && (
-                  <TextAnimation
-                    text="WEB DESIGNER"
-                    animationStyle="bounce"
-                    charClassName="mx-[2px]"
-                    activeCharClassName="text-[rgb(var(--primary-main))]"
-                    duration={400}
-                    staggerDelay={80}
-                    sequential={true}
-                    infinite={true}
-                  />
-                )} */}
               </h2>
             </div>
           </div>
