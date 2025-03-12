@@ -1,7 +1,6 @@
 'use client';
 
 import { Sidebar } from './sidebar';
-import { TopNavbar } from './top-navbar';
 import { useSidebar } from '@/lib/context/sidebar-context';
 
 interface ClientLayoutProps {
@@ -17,7 +16,7 @@ export function ClientLayout({ children }: ClientLayoutProps) {
       <Sidebar />
 
       {/* Top Navbar */}
-      <TopNavbar />
+      {/* <TopNavbar /> */}
 
       {/* Main content area that adjusts width based on sidebar state */}
       <main

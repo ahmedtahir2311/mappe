@@ -17,7 +17,7 @@ export function SocialItem({ icon, href, label, showTooltip = false }: SocialIte
       target="_blank"
       rel="noopener noreferrer"
       aria-label={label}
-      className="p-1.5 rounded-full hover:bg-[rgb(var(--primary-main))] hover:text-white"
+      className="p-1.5 rounded-full text-white  border border-[rgb(var(--primary-main))] bg-[rgb(var(--primary-main))] hover:bg-transparent hover:cursor-pointer"
     >
       {icon}
     </a>
