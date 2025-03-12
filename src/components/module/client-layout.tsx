@@ -22,7 +22,7 @@ export function ClientLayout({ children }: ClientLayoutProps) {
       {/* Main content area that adjusts width based on sidebar state */}
       <main
         className={`flex-grow transition-layout ${
-          isOpen ? 'ml-60' : 'ml-8'
+          isOpen ? 'ml-60' : 'ml-16'
         } overflow-y-auto scroll-smooth`}
       >
         {children}
