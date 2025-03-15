@@ -22,7 +22,7 @@ export function ClientLayout({ children }: ClientLayoutProps) {
       <main
         className={`flex-grow transition-layout ${
           isOpen ? 'ml-60' : 'ml-16'
-        } overflow-y-auto scroll-smooth`}
+        }  overflow-y-auto scroll-smooth`}
       >
         {children}
       </main>

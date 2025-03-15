@@ -83,7 +83,7 @@ const Card = ({ children, className = '' }: CardProps) => {
 
       {/* Content */}
       <div
-        className={`bg-[rgb(var(--background-secondary))] rounded-xl p-6 relative z-10 flex items-center justify-center  ${className}`}
+        className={`bg-[rgb(var(--background-secondary))] rounded-xl p-6 relative z-10 flex items-center justify-center ${className}`}
       >
         {children}
       </div>
